@@ -6,3 +6,5 @@ The repo contains:
 2. CV TEMPLATE .pdf file
 3. COVER LETTER .tex file
 4. COVER LETTER .pdf file
+
+Any questions and feedback are welcome and can be made at my linkedin profile where I also shared this repo and/or at the email address provided inside each file. 
