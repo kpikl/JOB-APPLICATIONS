@@ -1,5 +1,5 @@
 # JOB-APPLICATIONS
-Templates for job applications intended for mostly young professionals, but can be used and personalised by anyone. 
+Templates for job applications intended for young professionals, but can be used and personalised by anyone. 
 
 The repo contains:
 1. CV template .tex file
