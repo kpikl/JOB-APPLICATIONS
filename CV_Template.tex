@@ -1,0 +1,302 @@
+% ------------------------------------------------------------
+% CV TEMPLATE
+% OPEN ACCESS, MADE BY KRISTINA PIKL
+% DATE: 24.2.2026
+% CONTACT: kristinapikl01@gmail.com
+% ------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+% ------------------------------------------------------------
+% LAYOUT & TYPOGRAPHY
+% ------------------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{palatino}
+
+% ------------------------------------------------------------
+% GRAPHICS
+% ------------------------------------------------------------
+\usepackage{graphicx}
+
+% ------------------------------------------------------------
+% LINKS & ICONS
+% ------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{fontawesome5}
+
+% ------------------------------------------------------------
+% FORMATTING
+% ------------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% ------------------------------------------------------------
+% EDUCATION AND WORK BLOCK
+% ------------------------------------------------------------
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% ------------------------------------------------------------
+% HEADER + SKILLS TABLE MATCHING
+% ------------------------------------------------------------
+\setlength{\tabcolsep}{6pt}
+
+% ------------------------------------------------------------
+% LISTS
+% ------------------------------------------------------------
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
+
+% ------------------------------------------------------------
+% SECTION STYLING
+% ------------------------------------------------------------
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ------------------------------------------------------------
+% HELPERS
+% ------------------------------------------------------------
+\newcommand{\sep}{\hspace{0.6em}\textbar\hspace{0.6em}}
+
+% ------------------------------------------------------------
+% WIDTHS
+% ------------------------------------------------------------
+\newlength{\skillsw}
+\newlength{\midsep}
+\newlength{\grayw}
+\newlength{\leftw}
+
+\setlength{\skillsw}{0.20\textwidth}
+\setlength{\midsep}{1.0em}
+
+% GRAY BACKGROUND LOOKS WIDER THAN \SKILLSW BECAUSE OF PADDING (\TABCOLSEP ON BOTH SIDES)
+\setlength{\grayw}{\dimexpr\skillsw+2\tabcolsep\relax}
+
+% ENSURE THE TOTAL WIDTH IS EXACTLY \TEXTWIDTH
+\setlength{\leftw}{\dimexpr\textwidth-\grayw-\midsep\relax}
+
+% ------------------------------------------------------------
+% DATE GUTTER WIDTH
+% ------------------------------------------------------------
+\newcommand{\datew}{1.5cm}
+
+% ------------------------------------------------------------
+% SPACE BETWEEN ENTRIES
+% ------------------------------------------------------------
+\newcommand{\entrygap}{12pt}
+
+% ------------------------------------------------------------
+% MAKE LONGTABLE CELLS BEHAVE NICELY (TOP ALIGNED)
+% ------------------------------------------------------------
+\newcommand{\cell}[1]{\begin{minipage}[t]{\linewidth}\vspace{0pt}#1\end{minipage}}
+
+% ------------------------------------------------------------
+% SECTION TITLE THAT DRAWS RULE ONLY ACROSS LEFT AREA (STOPS BEFORE GRAY)
+% ------------------------------------------------------------
+\newcommand{\cvsectionleft}[1]{%
+  {\large\bfseries #1\par}%
+  \vspace{2pt}\rule{\linewidth}{0.4pt}\vspace{6pt}%
+}
+
+% ------------------------------------------------------------
+% LEFT SIDE ENTRY: DATE IN A FIXED GUTTER + CONTENT ON THE RIGHT
+% ------------------------------------------------------------
+% #1 DATE | #2 TITLE | #3 ORG/PLACE | #4 BODY
+\newcommand{\datedentry}[4]{%
+  \noindent
+  \begin{minipage}[t]{\datew}
+    {\small\textit{#1}}
+  \end{minipage}%
+  \hspace{0.8em}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\datew-0.8em\relax}
+    \textbf{#2}\par
+    {\small #3}\par
+    #4
+  \end{minipage}\par
+}
+
+% ------------------------------------------------------------
+% SKILLS COLUMN LIST
+% ------------------------------------------------------------
+\newcommand{\skillslist}[1]{%
+  \small
+  \begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt]
+    #1
+  \end{itemize}
+}
+
+% ------------------------------------------------------------
+% CONTINUOUS GRAY SIDEBAR ENVIRONMENT
+% ------------------------------------------------------------
+\newenvironment{grayblock}{%
+  \renewcommand{\arraystretch}{1.05}%
+  \begin{longtable}{@{}%
+    >{\raggedright\arraybackslash}p{\leftw}%
+    @{\hspace{\midsep}}%
+    >{\raggedright\arraybackslash\columncolor{black!8}}p{\skillsw}%
+    @{}}
+}{%
+  \end{longtable}
+}
+
+% ------------------------------------------------------------
+% PHOTO SETTINGS
+% ------------------------------------------------------------
+\newcommand{\photofile}{yourphoto.jpeg} % OPTIONS: JPG, PNG,... INSERT YOUR PHOTO HERE
+\newcommand{\photoshift}{-15pt} % NEGATIVE = MOVE PHOTO UP
+
+\begin{document}
+
+% ------------------------------------------------------------
+% HEADER (ALIGNED TO GRAY SIDEBAR WIDTH + GAP)
+% ------------------------------------------------------------
+
+\noindent
+\begin{minipage}[t]{\leftw}
+  \vspace{0pt}
+  {\Huge Name Lastname}\\[-2pt]
+  {\large \textsc{TITLE/OCCUPATION}}\\[6pt]
+
+  \underline{Date and place of birth:} 11.22.3333, City, Country\\
+  \underline{Address:} Street Number, City, Country\\[2pt]
+
+  \mbox{%
+    \href{mailto:youremail}{\faEnvelope\ your email}%
+    \sep
+    \faPhone\ +Phone Number%
+    \sep
+    \href{https://www.linkedin.com/in/linkedinprofile}{\faLinkedin\ linkedinprofile}%
+  }
+\end{minipage}%
+\hspace{\midsep}%
+\begin{minipage}[t]{\grayw}
+  \vspace*{\photoshift}
+  \includegraphics[height=\grayw,origin=c]{\photofile}
+\end{minipage}
+
+\vspace{4pt}
+
+% ------------------------------------------------------------
+% SUMMARY
+% ------------------------------------------------------------
+\section*{Summary}
+A short summary of your profession, skills and what you look for in a future position. 
+
+% ------------------------------------------------------------
+% GRAY SIDEBAR STARTS AT EDUCATION AND ENDS AFTER WORK
+% ------------------------------------------------------------
+
+\begin{grayblock}
+
+% ------------------------------------------------------------
+% EDUCATION HEADING + SKILLS GAINED HEADER
+% ------------------------------------------------------------
+
+\cell{\cvsectionleft{Education}} &
+\cell{\small\textbf{Skills}}\\[4pt]
+
+% ------------------------------------------------------------
+% EDUCATION ENTRIES
+% ------------------------------------------------------------
+
+\cell{\datedentry{Month Year -- Month Year}{MSc STUDY}{Faculty of FACULTY NAME, PLACE}{
+  \textbf{Thesis Project:}
+  \begin{itemize}
+    \item Explain the thesis project
+    \item Contact: Name of a contact person (thesis mentor) \faPhone\ + contact info
+  \end{itemize}
+}} &
+\cell{\skillslist{
+  \item Skills
+  \item Gained
+  \item During 
+  \item Thesis
+}}\\[\entrygap]
+
+\cell{\datedentry{Month Year -- Month Year}{BSc STUDY}{Faculty of FACULTY NAME, PLACE}{
+  \textbf{Thesis Project:}
+  \begin{itemize}
+    \item Explain the thesis project
+    \item Contact: Name of a contact person (thesis mentor) \faPhone\ + contact info
+  \end{itemize}
+}} &
+\cell{\skillslist{
+  \item Skills
+  \item Gained
+  \item During 
+  \item Thesis
+}}\\[\entrygap]
+
+% ------------------------------------------------------------
+% PROJECTS & WORK EXPERIENCE HEADING (STILL INSIDE GRAY BLOCK)
+% ------------------------------------------------------------
+
+\cell{\cvsectionleft{Projects \& Work Experience}} &
+\cell{}\\[4pt]
+
+% ------------------------------------------------------------
+% WORK ENTRIES
+% ------------------------------------------------------------
+
+\cell{\datedentry{Month Year -- Month Year}{Internship}{COMPANY NAME, PLACE}{
+  \begin{itemize}
+    \item Explain the internship project
+    \item Contact: Name of a contact person (mentor, boss) \faPhone\ + contact info
+  \end{itemize}
+}} &
+\cell{\skillslist{
+  \item Skills
+  \item Gained
+  \item During 
+  \item Internship
+}}\\[\entrygap]
+
+\cell{\datedentry{Month Year -- Month Year}{Position}{COMPANY NAME, PLACE}{
+  \begin{itemize}
+    \item Work description
+    \item Contact: Name of a contact person (mentor, boss) \faPhone\ + contact info
+  \end{itemize}
+}} &
+\cell{\skillslist{
+  \item Skills
+  \item Gained
+  \item During
+  \item Work 1
+}}\\[\entrygap]
+
+\cell{\datedentry{Month Year -- Month Year}{Position}{COMPANY NAME, PLACE}{
+  \begin{itemize}
+    \item Work description
+    \item Contact: Name of a contact person (mentor, boss) \faPhone\ + contact info
+  \end{itemize}
+}} &
+\cell{\skillslist{
+  \item Skills
+  \item Gained
+  \item During
+  \item Work 2
+}}\\[2pt]
+
+\end{grayblock}
+
+% =========================================================
+% LANGUAGES
+% =========================================================
+
+\section{Languages}
+
+\noindent
+\begin{tabular}{@{} l l l l l l @{}}
+Language1 (Level1) & Language2 (Level2) & Language3 (Level3) & Language4 (Level4) \\
+\end{tabular}
+
+\end{document}
