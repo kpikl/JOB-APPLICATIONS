@@ -7,4 +7,4 @@ The repo contains:
 3. COVER LETTER .tex file
 4. COVER LETTER .pdf file
 
-Any questions and feedback are welcome and can be made at my linkedin profile where I also shared this repo and/or at the email address provided inside each file. 
+Any questions and feedback are welcome and can be made on my linkedIN profile and/or by email. Both are provided on my git profile and in each file. 
