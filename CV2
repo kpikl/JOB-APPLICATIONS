@@ -1,0 +1,223 @@
+% ------------------------------------------------------------
+% CV TEMPLATE FOR YOUNG PROFESSIONALS
+% Created by Kristina Pikl
+% Version: 24 February 2026
+% Contact: kristinapikl01@gmail.com
+% Free to use and adapt with attribution
+% ------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+% ------------------------------------------------------------
+% LAYOUT & TYPOGRAPHY
+% ------------------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{palatino}
+
+% ------------------------------------------------------------
+% GRAPHICS
+% ------------------------------------------------------------
+\usepackage{graphicx}
+
+% ------------------------------------------------------------
+% LINKS & ICONS
+% ------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{fontawesome5}
+
+% ------------------------------------------------------------
+% FORMATTING
+% ------------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% ------------------------------------------------------------
+% LISTS
+% ------------------------------------------------------------
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
+
+% ------------------------------------------------------------
+% SECTION STYLING
+% ------------------------------------------------------------
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ------------------------------------------------------------
+% HELPERS
+% ------------------------------------------------------------
+\newcommand{\sep}{\hspace{0.6em}\textbar\hspace{0.6em}}
+
+% ------------------------------------------------------------
+% ENTRY WITH DATE ON THE RIGHT
+% ------------------------------------------------------------
+% #1 TITLE | #2 ORGANIZATION/PLACE | #3 DATE | #4 BODY
+\newcommand{\datedentry}[4]{%
+  \noindent
+  \textbf{#1}\par
+  {\small #2 \hfill \textit{#3}}\par
+  #4
+  \vspace{10pt}
+}
+
+\begin{document}
+
+% ------------------------------------------------------------
+% HEADER
+% ------------------------------------------------------------
+
+\noindent
+{\Huge Name Lastname}\\
+{\large \textsc{TITLE/OCCUPATION}}\\[6pt]
+
+City, Country
+\sep
+\href{mailto:your.email@example.com}{\faEnvelope\ your.email@example.com}%
+\sep
+\faPhone\ +00 000 000 000%
+\sep
+\href{https://www.linkedin.com/in/linkedinprofile}{\faLinkedin\ linkedinprofile}%
+
+% ------------------------------------------------------------
+% SUMMARY
+% ------------------------------------------------------------
+
+\section*{Summary}
+
+Write 2--4 sentences summarizing your background, key skills, relevant experience, and the type of role you are looking for.
+
+% ------------------------------------------------------------
+% SKILLS
+% ------------------------------------------------------------
+
+\section{Skills}
+
+\noindent
+Skill 1 \sep Skill 2 \sep Skill 3 \sep Skill 4 \sep Skill 5 \sep Skill 6 \sep Skill 7 \sep Skill 8
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+\section{Education}
+
+\datedentry{MSc STUDY, GPA: X.X}
+{Faculty of FACULTY NAME, University Name, City, Country}
+{Year}{
+  \textbf{Thesis Project:}
+  \begin{itemize}
+    \item Explain the thesis project, main research question, or main contribution.
+    \item Describe methods, tools, or results that are relevant for future positions.
+    \item Reference: Name of contact person \textit{(thesis mentor)} \faPhone\ + contact info
+  \end{itemize}
+}
+
+\datedentry{BSc STUDY, GPA: X.X}
+{Faculty of FACULTY NAME, University Name, City, Country}
+{Year}{
+  \textbf{Thesis Project:}
+  \begin{itemize}
+    \item Explain the thesis project, main research question, or main contribution.
+    \item Mention relevant tools, methods, or results.
+  \end{itemize}
+}
+
+% ------------------------------------------------------------
+% PROFESSIONAL EXPERIENCE
+% ------------------------------------------------------------
+
+\section{Professional Experience}
+
+\datedentry{Internship / Position Title}
+{Company or Institution Name, City, Country}
+{Month Year -- Month Year}{
+  \begin{itemize}
+    \item Describe the project, task, or responsibility.
+    \item Mention relevant tools, methods, or collaborations.
+    \item Reference: Name of contact person \textit{(mentor, supervisor, boss)} \faPhone\ + contact info
+  \end{itemize}
+}
+
+\datedentry{Volunteer / Student Position / Work Position}
+{Organization Name, City, Country}
+{Month Year -- Month Year}{
+  \begin{itemize}
+    \item Describe your main responsibility.
+    \item Mention the impact, target group, or skills gained.
+  \end{itemize}
+}
+
+% ------------------------------------------------------------
+% PROJECTS
+% ------------------------------------------------------------
+
+\section{Projects}
+
+\datedentry{Project Name}
+{Organization or Institution Name, City, Country}
+{Month Year -- Month Year}{
+  \begin{itemize}
+    \item Explain the project goal and your contribution.
+    \item Mention relevant collaboration, tools, or results.
+  \end{itemize}
+}
+
+\datedentry{Project Name}
+{Organization or Institution Name, City, Country}
+{Month Year -- Month Year}{
+  \begin{itemize}
+    \item Explain the project goal and your contribution.
+    \item Mention relevant collaboration, tools, or results.
+  \end{itemize}
+}
+
+% ------------------------------------------------------------
+% LEADERSHIP EXPERIENCE
+% ------------------------------------------------------------
+
+\section{Leadership Experience}
+
+\datedentry{Organization / Group Name}
+{Role}
+{Year}{
+  \begin{itemize}
+    \item Describe your leadership responsibilities.
+    \item Mention organization, communication, mentoring, or decision-making tasks.
+  \end{itemize}
+}
+
+\datedentry{Organization / Group Name}
+{Role}
+{Year}{
+  \begin{itemize}
+    \item Describe your leadership responsibilities.
+    \item Mention organization, communication, mentoring, or decision-making tasks.
+  \end{itemize}
+}
+
+% ------------------------------------------------------------
+% LANGUAGES
+% ------------------------------------------------------------
+
+\section{Languages}
+
+\noindent
+Language 1 (Level) \sep Language 2 (Level) \sep Language 3 (Level) \sep Language 4 (Level)
+
+% ------------------------------------------------------------
+% HOBBIES
+% ------------------------------------------------------------
+
+\section{Hobbies}
+
+\noindent
+Hobby 1 \sep Hobby 2 \sep Hobby 3 \sep Hobby 4 \sep Hobby 5
+
+\end{document}
